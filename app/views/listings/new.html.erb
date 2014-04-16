@@ -1,0 +1,3 @@
+<%= form_for @listing, :url => listings_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :avatar %>
+<% end %>
