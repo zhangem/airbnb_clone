@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'sass'
 gem 'paperclip'
+gem 'devise'
 
 
 group :development do
