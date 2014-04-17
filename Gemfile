@@ -13,6 +13,7 @@ gem 'bootstrap-sass-extras'
 gem 'sass'
 gem 'paperclip'
 gem 'devise'
+gem 'remotipart'
 
 
 group :development do
