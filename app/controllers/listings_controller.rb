@@ -7,16 +7,32 @@ class ListingsController < ApplicationController
   end
 end
 
-def new
-  @listing = Listing.new
+  def new
+    @listing = Listing.new
   end
 
   def show
-  @listing = Listing.all
+    @listing = Listing.find(params[:id])
+
   end
 
   def index
-    @listing = Listing.all
+    @listing = Listing.all.page(params[:page]).per(5)
+
+  end
+
+  def edit
+    @listing = Listing.find(params[:id])
+  end
+
+  def update
+    redirect_to listings_path
+  end
+
+  def destroy
+    @listing = Listing.find(params[:id])
+    @listing.destroy
+    redirect_to listings_path
   end
 
   private

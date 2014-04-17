@@ -14,6 +14,7 @@ gem 'sass'
 gem 'paperclip'
 gem 'devise'
 gem 'remotipart'
+gem 'kaminari'
 
 
 group :development do

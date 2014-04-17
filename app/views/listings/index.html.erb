@@ -3,6 +3,8 @@
 <h2>"Your Evil Vacation HeadQuarters Rental Service"</h2>
 </div>
 
+
+
 <div class="container">
   <div class="main-content">
     <span><img src="http://i32.tinypic.com/2jcauli.jpg"></span>
@@ -12,14 +14,14 @@
   </div>
    <%= link_to "Add a Listing", new_listing_path, id: "new_listing", remote: true %>
 
-
+<%= paginate @listing %>
 
 </div>
 
 <div id="all_listing">
   <ul>
     <% Listing.all.each do |listing| %>
-    <li><%= listing.name %><br><%= listing.content %><br><%= image_tag listing.avatar(:thumb) %></li>
+    <li><%= link_to listing.name, listing_path(listing) %><br><%= listing.content %><br><%= image_tag listing.avatar(:thumb) %></li></a>
     <% end %>
   </ul>
 </div>

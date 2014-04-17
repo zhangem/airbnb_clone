@@ -1,3 +1,7 @@
-<%= image_tag @listing.avatar.url %>
+<h1><%= @listing.name %></h1>
 <%= image_tag @listing.avatar.url(:medium) %>
-<%= image_tag @listing.avatar.url(:thumb) %>
+
+<p><%= @listing.content %></p>
+
+<p><%= link_to "Edit Info", edit_listing_path %></p>
+<%= link_to ("Delete Listing"), listing_path(@listing), method: "delete" %>
